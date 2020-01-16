@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #ffbe76;
+  justify-content: space-around;
+  align-items: center;
+
+  .card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+
+    &:nth-child(1) {
+      .card-item {
+        background: url(assets/img01.jpg);
+        background-size: contain;
+      }
+    }
+
+    &:nth-child(2) {
+      .card-item {
+        background: url(assets/img02.jpg);
+        background-size: contain;
+      }
+    }
+
+    &:nth-child(3) {
+      .card-item {
+        background: url(assets/img03.jpg);
+        background-size: contain;
+      }
+    }
+  }
+
+  .card-item {
+    background-color: #fff;
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+}
